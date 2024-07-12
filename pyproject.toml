@@ -1,10 +1,12 @@
 [build-system]
-requires = ["setuptools>=45", "wheel"]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools_scm]
+
 [project]
-name = "sak_rel_onri_system"
-version = "0.2.0"
+name = "sak_rel_onri"
+dynamic = ["version"]
 description = "An innovative mathematical framework implementing Sak, Rel, and Onri number systems"
 readme = "README.md"
 authors = [{name = "Seak Mengly", email = "fuujinmetsu@gmail.com"}]
@@ -13,6 +15,10 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
 ]
 keywords = ["mathematics", "number theory", "sak system", "rel system", "onri system"]
 dependencies = [
@@ -20,6 +26,37 @@ dependencies = [
 ]
 requires-python = ">=3.7"
 
+[project.optional-dependencies]
+dev = ["pytest", "ninja"]
+
 [project.urls]
 "Homepage" = "https://github.com/VNylle/sak-rel-onri"
 "Bug Tracker" = "https://github.com/VNylle/sak-rel-onri/issues"
+
+[tool.setuptools]
+packages = ["sak_rel_onri"]
+package-dir = {"" = "src"}
+
+# setup.cfg
+
+[metadata]
+name = sak_rel_onri
+author = Seak Mengly
+author_email = fuujinmetsu@gmail.com
+description = An innovative mathematical framework implementing Sak, Rel, and Onri number systems
+long_description = file: README.md
+long_description_content_type = text/markdown
+url = https://github.com/VNylle/sak-rel-onri
+classifiers =
+    Programming Language :: Python :: 3
+    License :: OSI Approved :: MIT License
+    Operating System :: OS Independent
+
+[options]
+package_dir =
+    = src
+packages = find:
+python_requires = >=3.7
+
+[options.packages.find]
+where = src
