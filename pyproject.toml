@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sak_system"
-version = "0.1.3"
+version = "0.1.2"
 description = "An innovative mathematical framework challenging traditional number systems"
 readme = "README.md"
 authors = [{name = "Seak Mengly", email = "fuujinmetsu@gmail.com"}]
