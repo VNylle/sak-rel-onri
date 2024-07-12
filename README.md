@@ -135,7 +135,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Your Name - your.email@example.com
+Saek Menglee - fuujinmetsu@gmail.com
 
 Project Link: [https://github.com/VNylle/sak-rel-onri](https://github.com/VNylle/sak-rel-onri)
 
