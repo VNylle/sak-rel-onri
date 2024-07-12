@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sak_system"
+version = "0.1.3"
+description = "An innovative mathematical framework challenging traditional number systems"
+readme = "README.md"
+authors = [{name = "Seak Mengly", email = "fuujinmetsu@gmail.com"}]
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["mathematics", "number theory", "sak system"]
+dependencies = [
+    "numpy",
+]
+requires-python = ">=3.7"
+
+[https://github.com/VNylle/sak-system]
