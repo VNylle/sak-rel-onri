@@ -3,9 +3,9 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sak_system"
-version = "0.1.2"
-description = "An innovative mathematical framework challenging traditional number systems"
+name = "sak_rel_onri_system"
+version = "0.2.0"
+description = "An innovative mathematical framework implementing Sak, Rel, and Onri number systems"
 readme = "README.md"
 authors = [{name = "Seak Mengly", email = "fuujinmetsu@gmail.com"}]
 license = {file = "LICENSE"}
@@ -14,10 +14,12 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-keywords = ["mathematics", "number theory", "sak system"]
+keywords = ["mathematics", "number theory", "sak system", "rel system", "onri system"]
 dependencies = [
     "numpy",
 ]
 requires-python = ">=3.7"
 
-[https://github.com/VNylle/sak-rel-onri]
+[project.urls]
+"Homepage" = "https://github.com/VNylle/sak-rel-onri"
+"Bug Tracker" = "https://github.com/VNylle/sak-rel-onri/issues"
