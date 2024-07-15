@@ -1,4 +1,4 @@
-from sak_rel_onri_system import Sak, Rel, Onri
+from sak_system import Sak, Rel, Onri
 
 def test_sak():
     s = Sak(0.7)
