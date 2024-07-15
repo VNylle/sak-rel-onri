@@ -1,147 +1,81 @@
-# Sak-Rel-Onri Number Systems
+# Sak System Library
 
-## Overview
+Welcome to the Sak System library. This library includes three mathematical systems: Sak, Rel, and Onri. Each system has its own rules and operations.
 
-The Sak-Rel-Onri package implements three number systems: Sak, Rel, and Onri. These systems provide unique mathematical frameworks that challenge traditional numerical concepts and offer new perspectives on computation and representation.
+## Sak System
 
-### Key Features
+The Sak system uses a baseline value of 0.5, and all operations between Sak objects are adjusted based on this value.
 
-- **Sak System**: A number system where all values are ≥ 0.5, redefining basic arithmetic and advanced mathematical operations.
-- **Rel System**: A relational number system that incorporates contextual factors into numerical representations.
-- **Onri System**: A system that models the interplay between fiction and reality in numerical form.
-- Advanced arithmetic operations for each system
-- Mathematical functions (trigonometric, exponential, logarithmic) adapted for each system
-- Utility functions for array creation and random number generation
-- Basic encryption and decryption capabilities
-- Interoperability functions for converting between systems
+### Sak Class
 
-## Installation
+The `Sak` class represents the Sak system. It includes methods for basic arithmetic operations (`+`, `-`, `*`, `/`, `**`) and static methods for common mathematical functions like inverse, summation, integration, and square root.
 
-You can install the Sak-Rel-Onri package using pip:
+### SakMath Class
 
-```bash
-pip install sak-rel-onri
-```
+The `SakMath` class provides trigonometric functions (`sin`, `cos`, `tan`), exponential, logarithmic, and other mathematical functions tailored for the Sak system.
 
-## Usage
+## Rel System
 
-### Basic Operations
+The Rel system incorporates three variables: `x`, `s`, and `t`. Operations between Rel objects adjust these variables accordingly.
 
-```python
-from sak_rel_onri import Sak, Rel, Onri
+### Rel Class
 
-# Sak System
-s1 = Sak(0.7)
-s2 = Sak(0.8)
-s_sum = s1 + s2
-print(f"Sak sum: {s_sum}")
+The `Rel` class represents the Rel system. It includes methods for basic arithmetic operations (`+`, `-`, `*`, `/`, `**`). This system handles calculations involving three variables, making it more complex than the Sak system.
 
-# Rel System
-r1 = Rel(1, 0.8, 0.9)
-r2 = Rel(2, 0.7, 0.6)
-r_product = r1 * r2
-print(f"Rel product: {r_product}")
+### RelMath Class
 
-# Onri System
-o1 = Onri(0.5, 2)
-o2 = Onri(0.3, 1)
-o_diff = o1 - o2
-print(f"Onri difference: {o_diff}")
-```
+The `RelMath` class provides trigonometric functions (`sin`, `cos`, `tan`), exponential, logarithmic, and other mathematical functions tailored for the Rel system.
 
-### Advanced Mathematics
+## Onri System
 
-```python
-from sak_rel_onri import SakMath, RelMath, OnriMath
+The Onri system uses two variables: `f` and `i`. Operations between Onri objects adjust these variables.
 
-# Sak Mathematics
-s = Sak(0.7)
-s_sin = SakMath.sin(s)
-s_log = SakMath.log(s)
-print(f"Sak sin: {s_sin}, Sak log: {s_log}")
+### Onri Class
 
-# Rel Mathematics
-r = Rel(1, 0.8, 0.9)
-r_cos = RelMath.cos(r)
-r_exp = RelMath.exp(r)
-print(f"Rel cos: {r_cos}, Rel exp: {r_exp}")
+The `Onri` class represents the Onri system. It includes methods for basic arithmetic operations (`+`, `-`, `*`, `/`, `**`). This system is designed to handle values within a specific range, making it unique compared to Sak and Rel.
 
-# Onri Mathematics
-o = Onri(0.5, 2)
-o_tan = OnriMath.tan(o)
-o_sqrt = OnriMath.sqrt(o)
-print(f"Onri tan: {o_tan}, Onri sqrt: {o_sqrt}")
-```
+### OnriMath Class
 
-### Utility Functions
+The `OnriMath` class provides trigonometric functions (`sin`, `cos`, `tan`), exponential, logarithmic, and other mathematical functions tailored for the Onri system.
 
-```python
-from sak_rel_onri import SakUtil, RelUtil, OnriUtil
+## Utility Functions
 
-# Create arrays
-sak_array = SakUtil.array([0.6, 0.7, 0.8])
-rel_array = RelUtil.array([1, 2, 3])
-onri_array = OnriUtil.array([0.2, 0.4, 0.6])
+Utility functions for handling arrays and generating random values are provided for each system.
 
-# Generate random numbers
-random_sak = SakUtil.random(0.5, 1)
-random_rel = RelUtil.random(0, 10)
-random_onri = OnriUtil.random(0, 1)
-```
+### SakUtil
 
-### Encryption and Decryption
+The `SakUtil` class includes methods for creating arrays of Sak objects and generating random Sak values.
 
-```python
-from sak_rel_onri import encrypt_sak, decrypt_sak
+### RelUtil
 
-s = Sak(0.7)
-key = 12345
-encrypted = encrypt_sak(s, key)
-decrypted = decrypt_sak(encrypted, key)
-print(f"Original: {s}, Decrypted: {decrypted}")
-```
+The `RelUtil` class includes methods for creating arrays of Rel objects and generating random Rel values.
 
-### System Interoperability
+### OnriUtil
 
-```python
-from sak_rel_onri import sak_to_rel, rel_to_onri, onri_to_sak
+The `OnriUtil` class includes methods for creating arrays of Onri objects and generating random Onri values.
 
-s = Sak(0.7)
-r = sak_to_rel(s)
-o = rel_to_onri(r)
-s_again = onri_to_sak(o)
-print(f"Sak -> Rel -> Onri -> Sak: {s_again}")
-```
+## Encryption and Decryption Functions
 
-## Contributing
+These functions allow for encrypting and decrypting values within each system.
 
-Contributions to the Sak-Rel-Onri package are welcome! Please feel free to submit pull requests, create issues, or suggest new features.
+### Sak Encryption
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+The Sak encryption functions convert a Sak object's value into an integer, apply an XOR operation with a key, and return the encrypted value. The decryption function reverses this process.
 
-## License
+### Rel Encryption
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+The Rel encryption functions convert the `x`, `s`, and `t` values of a Rel object into integers, apply an XOR operation with a key, and return the encrypted values. The decryption function reverses this process.
 
-## Acknowledgments
+### Onri Encryption
 
-- The Sak system was inspired by the concept that nothingness cannot exist in mathematics.
-- The Rel system draws from ideas in relational mathematics and contextual number theory.
-- The Onri system was motivated by explorations into the mathematical representation of fiction and reality.
+The Onri encryption functions convert the `f` and `i` values of an Onri object into integers, apply an XOR operation with a key, and return the encrypted values. The decryption function reverses this process.
 
-## Contact
+## Integration Functions
 
-Saek Menglee - fuujinmetsu@gmail.com
+These functions provide conversions between the different systems.
 
-Project Link: [https://github.com/VNylle/sak-rel-onri](https://github.com/VNylle/sak-rel-onri)
-
----
-
-We hope you find the Sak-Rel-Onri package intriguing and useful for your mathematical explorations. Reminder, The Sak System is what I create for fun.
-
-
-(This README.md is ai generated btw)
+- `sak_to_rel`: Converts a Sak object to a Rel object.
+- `rel_to_sak`: Converts a Rel object to a Sak object.
+- `sak_to_onri`: Converts a Sak object to an Onri object.
+- `onri_to_sak`: Converts an Onri object to a Sak object.
+- `rel_to_onri`: Converts a Rel object to an Onri object.
